@@ -48,6 +48,12 @@ def main():
 	# sort by ucsc emails
 	# compare ucsc emails
 	# if match, write row into outfile
+	
+	# compare_A: from cell F1 to end of F column
+	#	sort emails
+
+	#compare_B: from cell C2 to end of C column
+	#	sort emails
 
 if __name__ == '__main__':
 	main()
