@@ -1,2 +1,5 @@
 # excel files
 *.xlsx
+
+# excel to text
+zppfind-15.txt
