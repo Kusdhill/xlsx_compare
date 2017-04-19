@@ -18,6 +18,7 @@ def check_extension(filename):
 	if extension!=good_extension:
 		sys.exit("must pass in .xlsx files")
 
+
 def main():
 	print("checking command line arguments")
 	if len(sys.argv)!=4:
@@ -42,8 +43,11 @@ def main():
 	compare_B = workbook_B.get_sheet_by_name(sheet_names_B[0])
 
 	print(compare_A['A1'].value)
+	print(compare_B['A1'].value)
 
-
+	# sort by ucsc emails
+	# compare ucsc emails
+	# if match, write row into outfile
 
 if __name__ == '__main__':
 	main()
