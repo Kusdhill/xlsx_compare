@@ -31,8 +31,18 @@ def main():
 	filename_B = sys.argv[2]
 	outfile = sys.argv[3]
 
-	compare_A = openpyxl.load_workbook(filename_A)
-	compare_B = openpyxl.load_workbook(filename_B)
+	workbook_A = openpyxl.load_workbook(filename_A)
+	workbook_B = openpyxl.load_workbook(filename_B)
+
+	sheet_names_A = workbook_A.get_sheet_names()
+	sheet_names_B = workbook_B.get_sheet_names()
+
+
+	compare_A = workbook_A.get_sheet_by_name(sheet_names_A[0])
+	compare_B = workbook_B.get_sheet_by_name(sheet_names_B[0])
+
+	print(compare_A['A1'].value)
+
 
 
 if __name__ == '__main__':
