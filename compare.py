@@ -27,6 +27,13 @@ def main():
 		for i in range(1, len(sys.argv)):
 			check_extension(sys.argv[i])
 
+	filename_A = sys.argv[1]
+	filename_B = sys.argv[2]
+	outfile = sys.argv[3]
+
+	compare_A = openpyxl.load_workbook(filename_A)
+	compare_B = openpyxl.load_workbook(filename_B)
+
 
 if __name__ == '__main__':
 	main()
